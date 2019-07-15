@@ -1,2 +1,2 @@
-# ImageResize
-Image resize class in php
+# Image
+Process about images
