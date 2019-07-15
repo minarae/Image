@@ -1,4 +1,11 @@
-class Resize
+<?php
+
+/**
+ * Class Resize
+ *
+ * @package Apps\Component\SmartPopup\Util
+ */
+class Image
 {
     /**
      * @var resource
@@ -14,14 +21,14 @@ class Resize
     private $height;
 
     /**
-     * Resize constructor.
+     * Image constructor.
      *
-     * @param        $filename
+     * @param        $content
      * @param string $type
      */
-    public function __construct($filename, $type = 'file')
+    public function __construct($content, $type = 'file')
     {
-        $this->image = $this->openImage($filename, $type);
+        $this->image = $this->openImage($content, $type);
 
         // 비어있는채로 반환하는 경우를 대비하여서
         $this->imageResized = $this->image;
@@ -244,10 +251,14 @@ class Resize
         imagedestroy($this->imageResized);
     }
 
-    public function getStream()
+    public function getStream($type = 'jpg')
     {
         ob_start();
-        imagejpeg($this->imageResized);
+        if ($type === 'png') {
+            imagepng($this->imageResized);
+        } else {
+            imagejpeg($this->imageResized);
+        }
         $content = ob_get_contents();
         ob_end_clean();
 
