@@ -1,9 +1,7 @@
 <?php
 
 /**
- * Class Resize
- *
- * @package Apps\Component\SmartPopup\Util
+ * Class Image
  */
 class Image
 {
