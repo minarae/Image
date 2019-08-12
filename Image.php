@@ -1,5 +1,5 @@
 <?php
-namespace minarae/Image;
+namespace minarae\Image;
 
 /**
  * Class Image
