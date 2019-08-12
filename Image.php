@@ -1,17 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: 김성진
- * Date: 2019-03-18
- * Time: 오후 1:26
- */
-
-namespace Apps\Component\SmartPopup\Util;
+namespace minarae/Image;
 
 /**
- * Class Resize
- *
- * @package Apps\Component\SmartPopup\Util
+ * Class Image
  */
 class Image
 {
